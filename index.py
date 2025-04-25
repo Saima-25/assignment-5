@@ -86,7 +86,7 @@ elif choice == "Store Data":
         if st.button("Ecncrpyt and Save"):
             user = st.session_state.users[st.session_state.current_user]
             encrypted = encrypt(user["key"], data)
-            user["data"][encrypted] = ""  # Store empty string as a placeholder
+            user["data"][encrypted] = ""  
             save_users(st.session_state.users)
             st.success("Data stored!")
             st.code(encrypted)
